@@ -1,0 +1,39 @@
+{
+  "name": "nestjs-knex-javascript-starter",
+  "version": "1.0.0",
+  "description": "NestJS Knex + JavaScript starter",
+  "scripts": {
+    "build": "babel -d ./build ./src",
+    "clean": "rimraf build",
+    "run:prod": "cross-env NODE_ENV=production node ./build/main.js",
+    "run:dev": "cross-env NODE_ENV=development nodemon",
+    "start": "run-s clean build run:prod",
+    "start:dev": "run-s run:dev"
+  },
+  "author": "John Joshua Ferrer <johnjoshuaferrer@disroot.org>",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^6.11.6",
+    "@nestjs/core": "^6.11.6",
+    "@nestjs/platform-fastify": "^6.11.6",
+    "knex": "^0.20.9",
+    "pg": "^7.18.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
+    "cross-env": "^7.0.0",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "sqlite3": "^4.1.1"
+  }
+}
